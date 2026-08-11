@@ -1,0 +1,85 @@
+Variable	Label
+ID	Pseudonymous respondent identifier, randomly assigned. Not linkable to the original fieldwork panel identifier.
+Q1a_1	"Q1a_1 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Newspapers (print or website / app, for example Daily Mail or Guardian Online)"
+Q1a_2	"Q1a_2 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Television (including live streaming, on demand and broadcast)"
+Q1a_3	"Q1a_3 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Radio"
+Q1a_4	"Q1a_4 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? AI chatbots (for example ChatGPT)"
+Q1a_5	"Q1a_5 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Social media sites (for example Facebook, Instagram, TikTok, Twitter/X, YouTube)"
+Q1a_6	"Q1a_6 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Other internet sites, (for example BBC News)"
+Q1a_7	"Q1a_7 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Podcasts"
+Q1a_8	"Q1a_8 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Internet Search (for example Google)"
+Q1a_9	"Q1a_9 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? Other"
+Q1a_10	"Q1a_10 Over the past four weeks, which of the following have you used find out about UK political issues or current affairs? None of the above"
+Q1b_1	"Q1b_1 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Newspapers (print or website / app, for example Daily Mail or Guardian Online)"
+Q1b_2	"Q1b_2 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Television (including live streaming, on demand and broadcast)"
+Q1b_3	"Q1b_3 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Radio"
+Q1b_4	"Q1b_4 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  AI chatbots (for example ChatGPT)"
+Q1b_5	"Q1b_5 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Social media sites (for example Facebook, Instagram, TikTok, Twitter/X, YouTube)"
+Q1b_6	"Q1b_6 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Other internet sites, (for example BBC News)"
+Q1b_7	"Q1b_7 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Podcasts"
+Q1b_8	"Q1b_8 In general, how much do you trust the following sources to provide accurate information about UK political issues or current affairs?  Internet Search (for example Google)"
+Q1c	"Q1c How often, if at all, do you use AI chatbots in your professional life or leisure time?"
+Q1d_1	"Q1d_1 Which, if any, of the following AI chatbots have you used in the last four weeks? ChatGPT"
+Q1d_2	"Q1d_2 Which, if any, of the following AI chatbots have you used in the last four weeks? Gemini / Bard"
+Q1d_3	"Q1d_3 Which, if any, of the following AI chatbots have you used in the last four weeks? Claude"
+Q1d_4	"Q1d_4 Which, if any, of the following AI chatbots have you used in the last four weeks? Bing AI"
+Q1d_5	"Q1d_5 Which, if any, of the following AI chatbots have you used in the last four weeks? Pi"
+Q1d_6	"Q1d_6 Which, if any, of the following AI chatbots have you used in the last four weeks? Perplexity AI"
+Q1d_7	"Q1d_7 Which, if any, of the following AI chatbots have you used in the last four weeks? Open source chatbots for example Llama or Mistral"
+Q1d_8	"Q1d_8 Which, if any, of the following AI chatbots have you used in the last four weeks? Other"
+Q1d_9	"Q1d_9 Which, if any, of the following AI chatbots have you used in the last four weeks? None of these/ I haven’t used AI chatbots in the last four weeks"
+Q1e_1	"Q1e_1 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? Personal issues, such as health or relationships"
+Q1e_2	"Q1e_2 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? Practical matters, such as DIY or cooking"
+Q1e_3	"Q1e_3 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? Legal or financial advice"
+Q1e_4	"Q1e_4 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? Information to help me with my work or education"
+Q1e_5	"Q1e_5 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? UK current affairs or political issues (including information about the UK general election)"
+Q1e_6	"Q1e_6 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? Help with translation, or help composing a piece of writing"
+Q1e_7	"Q1e_7 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? I tried to engage the chatbot in a conversation just for fun"
+Q1e_8	"Q1e_8 In the last four weeks, have you asked an AI chatbot for information or advice on any of the following topics? I used a chatbot for something else"
+Q2a	"Q2a In the last four weeks, did you see social media content focussed on UK political issues that you suspected to be AI-generated?"
+Q2b	"Q2b In the last four weeks, did you see news articles focussed on UK political issues that you suspected to be AI-generated?"
+Q2c	Q2c In the last four weeks did you see online images or videos on any subject that you suspected to be  AI-generated fakes (often called deepfakes)?
+Q3a_1	"Q3a_1 In the last four weeks, have you seen information about UK current affairs or political issues from any of the following sources? Social media sites (for example Facebook, Instagram, TikTok, Twitter/X, YouTube)"
+Q3a_2	"Q3a_2 In the last four weeks, have you seen information about UK current affairs or political issues from any of the following sources? Newspapers (print or website / app, for example Daily Mail or Guardian Online)"
+Q3a_3	"Q3a_3 In the last four weeks, have you seen information about UK current affairs or political issues from any of the following sources? Generated by an AI chatbot (for example ChatGPT)"
+Q3b	"Q3b Thinking about the information about UK current affairs or political issues you saw on social media, did it make you more likely to vote, less likely to vote, or did it make no difference?"
+Q3c	"Q3c Thinking about the information about UK current affairs or political issues you saw in newspapers, did it make you more likely to vote, less likely to vote, or did it not make no difference?"
+Q3d	"Q3d Thinking about the information  about UK current affairs or political issues that was generated by an AI chatbot, did it make you more likely to vote, less likely to vote, or did it make no difference?"
+Q4a_1	"Q4a_1 In the last four weeks, did you search online for any of the following practical information about the UK general election? Information about election rules, such as voter ID rules"
+Q4a_2	"Q4a_2 In the last four weeks, did you search online for any of the following practical information about the UK general election? Information about the date of the election"
+Q4a_3	"Q4a_3 In the last four weeks, did you search online for any of the following practical information about the UK general election? Information about the opening hours of polling stations"
+Q4a_4	"Q4a_4 In the last four weeks, did you search online for any of the following practical information about the UK general election? Information about eligibility to vote"
+Q4a_5	"Q4a_5 In the last four weeks, did you search online for any of the following practical information about the UK general election? Information about voter registration"
+Q4a_6	"Q4a_6 In the last four weeks, did you search online for any of the following practical information about the UK general election? Something else relevant to the forthcoming election"
+Q4a_7	"Q4a_7 In the last four weeks, did you search online for any of the following practical information about the UK general election? I did not search for information about the election"
+Q4a_8	"Q4a_8 In the last four weeks, did you search online for any of the following practical information about the UK general election? I don’t know"
+Q4b_1	Q4b_1 Which websites did you use to search for information about the UK general election?  UK Government webpages
+Q4b_2	"Q4b_2 Which websites did you use to search for information about the UK general election?  A search engine, such as Google or Bing"
+Q4b_3	"Q4b_3 Which websites did you use to search for information about the UK general election?  An AI chatbot, such as ChatGPT or Gemini"
+Q4b_4	Q4b_4 Which websites did you use to search for information about the UK general election?  Social media sites
+Q4b_5	Q4b_5 Which websites did you use to search for information about the UK general election?  News websites
+Q4b_6	Q4b_6 Which websites did you use to search for information about the UK general election?  Other
+Q4b_7	Q4b_7 Which websites did you use to search for information about the UK general election?  Don’t know
+Q4c	Q4c Was the information you found on these websites helpful?
+Q4d	Q4d Did the information you found on these websites seem accurate?
+Q5a_1	Q5a_1 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? The economy
+Q5a_2	Q5a_2 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Brexit
+Q5a_3	Q5a_3 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Immigration
+Q5a_4	Q5a_4 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Foreign affairs
+Q5a_5	Q5a_5 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? The cost-of-living crisis
+Q5a_6	Q5a_6 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Climate change and net zero
+Q5a_7	Q5a_7 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? National Health Service
+Q5a_8	Q5a_8 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Housing policy
+Q5a_9	Q5a_9 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Scottish Independence
+Q5a_10	"Q5a_10 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Welfare, taxes or benefits"
+Q5a_11	Q5a_11 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Criminal justice and policing
+Q5a_12	Q5a_12 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Other
+Q5a_13	Q5a_13 You said that you have used an AI chatbot in the past four weeks to find out about current affairs or political issues in the UK. Which topics did you find out about? Prefer not to say
+Q5b	"Q5b How useful, if at all, were the AI chatbot’s replies?"
+Q5c	"Q5c How accurate, if at all, did the AI chatbot’s replies seem?"
+Q5e	"Q5e Did the AI chatbot’s replies seem to be fair and balanced, or did the replies favour left-wing views over right-wing views, or vice versa?"
+Q5f	Q5f Did the way the AI chatbot replied influence your perspective on the issues that you researched?
+Q5g	Q5g Did the way it replied influence how favourably you thought about individual UK politicians or political parties on the left of the political spectrum?
+Q5h	Q5h Did the way it replied change how favourably you thought about individual UK politicians or political parties on the right of the political spectrum?
+Q5i	Q5i Did the way it replied change the likelihood that you would vote for individual UK politicians or political parties?
+Q5j	Q5j Did it make you more certain about your voting intention?
