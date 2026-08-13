@@ -136,6 +136,18 @@ replication, contact the corresponding author.
 
 ## Licence
 
-> **Placeholder — not yet approved.** Proposed: code in `code/` under the MIT Licence
-> (`LICENSE`); data in `data/`, figures, and parameter estimates under the Open Government
-> Licence v3.0 (`LICENSE-DATA`). Confirm before publishing.
+This repository is dual-licensed.
+
+| Contents | Licence | File |
+|---|---|---|
+| `code/` | MIT | [`LICENSE`](LICENSE) |
+| `data/`, `figures/`, `parameter_estimates/`, `parameter_estimates_compliance_cov/` | Open Government Licence v3.0 | [`LICENSE-DATA`](LICENSE-DATA) |
+
+Copyright © Crown copyright 2026, UK AI Security Institute.
+
+When reusing the data, figures, or parameter estimates, include the attribution
+statement:
+
+> Contains public sector information licensed under the Open Government Licence v3.0.
+
+Please do not attempt to re-identify individual respondents.

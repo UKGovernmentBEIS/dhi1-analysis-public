@@ -1,12 +1,11 @@
-PROPOSED — NOT YET APPROVED. Confirm the licence and fill in the copyright holder
-before publishing this repository. Applies to data/, figures/, parameter_estimates/
-and parameter_estimates_compliance_cov/. Code in code/ is licensed separately; see
-LICENSE.
-
 Open Government Licence v3.0
 ============================
 
-Copyright (c) 2026 <COPYRIGHT HOLDER — e.g. Department for Science, Innovation and Technology>
+© Crown copyright 2026, UK AI Security Institute
+
+Applies to data/, figures/, parameter_estimates/ and
+parameter_estimates_compliance_cov/. Code in code/ is licensed separately; see
+LICENSE.
 
 The data, figures, and parameter estimates in this repository are licensed under the
 Open Government Licence v3.0. You are free to copy, publish, distribute, transmit and

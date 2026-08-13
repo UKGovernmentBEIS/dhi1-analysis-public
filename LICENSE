@@ -1,10 +1,9 @@
-PROPOSED — NOT YET APPROVED. Confirm the licence and fill in the copyright holder
-before publishing this repository. Applies to the contents of code/ only; see
-LICENSE-DATA for data, figures, and parameter estimates.
-
 MIT License
 
-Copyright (c) 2026 <COPYRIGHT HOLDER — e.g. Department for Science, Innovation and Technology>
+Copyright (c) 2026 UK AI Security Institute
+
+Applies to the contents of code/ only. For data, figures, and parameter estimates,
+see LICENSE-DATA.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
