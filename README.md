@@ -131,8 +131,7 @@ The two affected notebooks carry a header cell stating which of their cells will
 
 The underlying data cannot be published because it contains UK GDPR Article 9
 special-category data (ethnicity, religion, disability, mental health, political opinion)
-at a level of detail that makes most respondents unique. Researchers wanting access for
-replication should contact the corresponding author of the paper.
+at a level of detail that makes most respondents unique.
 
 ## Citation
 
