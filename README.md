@@ -71,10 +71,10 @@ python data_analysis_pipeline_no_compliance.py --dataset trust --prompting 0
 `data_analysis_pipeline_no_compliance.py` is the **canonical** pipeline. Random seeds are
 fixed (`jax.random.PRNGKey(1)`), so runs are reproducible given the same package versions.
 
-> **Both** pipeline scripts write to `parameter_estimates/`. Running
-> `data_analysis_pipeline.py` will overwrite the reported results in place. Back that
-> directory up first if you want to keep both sets. The `_compliance_cov` outputs were
-> separated by hand after running that variant.
+The two pipelines write to separate directories by default, so neither can overwrite the
+other's results: the canonical script writes to `parameter_estimates/` and `plots/`, and
+`data_analysis_pipeline.py` writes to `parameter_estimates_compliance_cov/` and
+`plots_compliance_cov/`. Override either with `--output-dir` / `--plots-dir`.
 
 ### Why there are two pipelines
 
@@ -185,5 +185,3 @@ When reusing the data, figures, or parameter estimates, include the attribution
 statement:
 
 > Contains public sector information licensed under the Open Government Licence v3.0.
-
-Please do not attempt to re-identify individual respondents.

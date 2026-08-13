@@ -7,12 +7,16 @@ compliance score (sub_compliance) as a covariate from all GLMs.
 The original pipeline retaining sub_compliance is preserved in data_analysis_pipeline.py.
 
 This is the CANONICAL pipeline: its outputs are the ones in ../parameter_estimates/,
-and they are the results reported in the paper. The sub_compliance variant's outputs
-were moved to ../parameter_estimates_compliance_cov/ by hand -- note that both scripts
-write to ../parameter_estimates/, so running the other one overwrites these.
+and they are the results reported in the paper. The sub_compliance variant
+(data_analysis_pipeline.py) defaults to ../parameter_estimates_compliance_cov/, so the
+two scripts write to separate directories and neither can overwrite the other's results.
 
 Run one combination:
     python data_analysis_pipeline_no_compliance.py --dataset trust --prompting 0
+
+Write somewhere else:
+    python data_analysis_pipeline_no_compliance.py --dataset trust --prompting 0 \
+        --output-dir ../my_estimates --plots-dir ../my_plots
 
 Run all eight combinations:
     bash run_pipeline.sh
@@ -48,7 +52,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, required=True,
                     choices=['misinfo', 'trust', 'private', 'extreme'])
 parser.add_argument('--prompting', type=int, required=True, choices=[0, 1])
+parser.add_argument('--output-dir', type=str, default='../parameter_estimates',
+                    help='Directory for parameter estimates and WAIC comparisons '
+                         "(default: ../parameter_estimates).")
+parser.add_argument('--plots-dir', type=str, default='../plots',
+                    help='Directory for diagnostic plots (default: ../plots).')
 args = parser.parse_args()
+
+OUTPUT_DIR = args.output_dir.rstrip('/')
+PLOTS_DIR = args.plots_dir.rstrip('/')
 
 
 # Set environment before importing JAX
@@ -95,8 +107,8 @@ rope_interval = np.array([-rope, rope])
 logger.info(f"Local device count: {jax.local_device_count()}")
 
 # Ensure output directories exist
-os.makedirs('../plots', exist_ok=True)
-os.makedirs('../parameter_estimates', exist_ok=True)
+os.makedirs(PLOTS_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 # ============================================================
@@ -518,7 +530,7 @@ def plot_forestplot(summary_df, figsize=(10, 16), rope_interval=rope_interval, o
     plt.axvspan(rope_interval[0], rope_interval[1], color='gray', alpha=0.3, label='ROPE')
     plt.yticks(range(summary_df.shape[0]), summary_df['Parameter'])
     plt.xlabel('Effect Size')
-    plt.savefig(f'../plots/forest_plot_full_GLM_{outcome}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'{PLOTS_DIR}/forest_plot_full_GLM_{outcome}.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 
@@ -718,7 +730,7 @@ if __name__ == '__main__':
         plt.xlabel("Predictors")
         plt.ylabel("Observations")
         plt.title(f"Design Matrix: {dataset} p{prompting} em{exclude_models}")
-        plt.savefig(f'../plots/design_matrix_{dataset}_p{prompting}_em{exclude_models}.png', dpi=300, bbox_inches='tight')
+        plt.savefig(f'{PLOTS_DIR}/design_matrix_{dataset}_p{prompting}_em{exclude_models}.png', dpi=300, bbox_inches='tight')
         plt.close()
 
         # VIF
@@ -753,11 +765,11 @@ if __name__ == '__main__':
 
         # Save
         if exclude_models == 0:
-            summary_full_df.to_csv(f'../parameter_estimates/summary_full_GLM_{dataset}_prompting_{prompting}.csv', index=False)
+            summary_full_df.to_csv(f'{OUTPUT_DIR}/summary_full_GLM_{dataset}_prompting_{prompting}.csv', index=False)
             plot_forestplot(summary_full_df, figsize=(10, 16), rope_interval=rope_interval, 
                           outcome=f"{dataset}_prompting_{prompting}_full_GLM")
         else:
-            summary_full_df.to_csv(f'../parameter_estimates/summary_full_GLM_{dataset}_prompting_{prompting}_no_model.csv', index=False)
+            summary_full_df.to_csv(f'{OUTPUT_DIR}/summary_full_GLM_{dataset}_prompting_{prompting}_no_model.csv', index=False)
             plot_forestplot(summary_full_df, figsize=(6, 8), rope_interval=rope_interval, 
                           outcome=f"{dataset}_prompting_{prompting}_full_GLM_no_model")
 
@@ -769,7 +781,7 @@ if __name__ == '__main__':
                 az.plot_trace(az.from_numpyro(mcmc_full), var_names=["sigma_subject", "beta_scale", "cutpoints"])
             else:
                 az.plot_trace(az.from_numpyro(mcmc_full), var_names=["sigma_subject", "beta_scale"])
-            plt.savefig(f'../plots/traceplot_{dataset}_p{prompting}_em{exclude_models}.png', dpi=300, bbox_inches='tight')
+            plt.savefig(f'{PLOTS_DIR}/traceplot_{dataset}_p{prompting}_em{exclude_models}.png', dpi=300, bbox_inches='tight')
             plt.close()
         except Exception as e:
             logger.error(f"Traceplot failed: {e}")
@@ -810,7 +822,7 @@ if __name__ == '__main__':
     plt.xlabel("Predictors")
     plt.ylabel("Observations")
     plt.title(f"Design Matrix Control: {dataset} p{prompting}")
-    plt.savefig(f'../plots/design_matrix_control_{dataset}_p{prompting}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'{PLOTS_DIR}/design_matrix_control_{dataset}_p{prompting}.png', dpi=300, bbox_inches='tight')
     plt.close()
 
     # Run inference 
@@ -834,7 +846,7 @@ if __name__ == '__main__':
     logger.info(f"\n{summary_control_df}")
     mcmc_control.print_summary(exclude_deterministic=False)
 
-    summary_control_df.to_csv(f'../parameter_estimates/summary_control_GLM_{dataset}_prompting_{prompting}.csv', index=False)
+    summary_control_df.to_csv(f'{OUTPUT_DIR}/summary_control_GLM_{dataset}_prompting_{prompting}.csv', index=False)
     plot_forestplot(summary_control_df, figsize=(6, 8), rope_interval=rope_interval, 
                     outcome=f"{dataset}_prompting_{prompting}_control_GLM")
 
@@ -846,7 +858,7 @@ if __name__ == '__main__':
             az.plot_trace(az.from_numpyro(mcmc_control), var_names=["sigma_subject", "beta_scale", "cutpoints"])
         else:
             az.plot_trace(az.from_numpyro(mcmc_control), var_names=["sigma_subject", "beta_scale"])
-        plt.savefig(f'../plots/traceplot_control_{dataset}_p{prompting}.png', dpi=300, bbox_inches='tight')
+        plt.savefig(f'{PLOTS_DIR}/traceplot_control_{dataset}_p{prompting}.png', dpi=300, bbox_inches='tight')
         plt.close()
     except Exception as e:
         logger.error(f"Traceplot failed: {e}")
@@ -860,7 +872,7 @@ if __name__ == '__main__':
             "GLM_control": mcmc_control
         })
         logger.info(f"\nWAIC Comparison:\n{comparison}")
-        comparison.to_csv(f'../parameter_estimates/waic_comparison_{dataset}_prompting_{prompting}.csv')
+        comparison.to_csv(f'{OUTPUT_DIR}/waic_comparison_{dataset}_prompting_{prompting}.csv')
     except Exception as e:
         logger.error(f"WAIC comparison failed: {e}")
 
