@@ -1,20 +1,33 @@
-# DHI1 — analysis code and data
+# Conversational AI increases political knowledge as effectively as self-directed internet search
 
-Analysis code and de-identified data for a randomised study of how conversations with AI
-chatbots affect political beliefs, trust, and attitudes, fielded on a UK sample around the
-2024 general election. Participants were randomised to a chatbot condition or a control
-condition, with outcomes measured pre- and post-interaction across four domains:
-misinformation susceptibility, trust, privately held beliefs, and attitude extremity.
+Analysis code and data for:
 
-> **Placeholder:** replace this paragraph with the paper title, authors, abstract link and
-> DOI before publishing, and fill in the citation block below.
+> Lennart Luettgau, Hannah Rose Kirk, Kobi Hackenburg, Jessica Bergs, Henry Davidson,
+> Henry Ogden, Divya Siddarth, Saffron Huang, and Christopher Summerfield.
+> *Conversational AI increases political knowledge as effectively as self-directed internet
+> search.* arXiv:2509.05219.
+> [arxiv.org/abs/2509.05219](https://arxiv.org/abs/2509.05219)
+
+The paper reports two studies conducted on UK samples around the 2024 general election:
+
+- A **nationally representative survey** (N = 2,499) measuring how widely conversational AI
+  was used to find politically relevant information.
+- **Randomised controlled trials** (N = 2,858) comparing task-directed conversation with an
+  AI chatbot against self-directed Google search, with outcomes measured pre- and
+  post-interaction across four domains: misinformation susceptibility, trust, privately held
+  beliefs, and attitude extremity. Effects were assessed across topics, viewpoints, prompting
+  strategies, and model families.
+
+This repository contains the data and code behind those analyses. See
+[Reproducing the results](#reproducing-the-results) for what does and does not regenerate
+from the published data.
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
 | `code/` | Analysis pipeline, notebooks, and the de-identification script |
-| `data/` | De-identified participant data and survey codebooks |
+| `data/` | Pseudonimised participant data and survey codebooks |
 | `parameter_estimates/` | **Reported** GLM parameter estimates and WAIC comparisons |
 | `parameter_estimates_compliance_cov/` | Same models retaining the post-treatment compliance covariate (not reported; see below) |
 | `figures/` | Figures as published, in PDF |
@@ -120,19 +133,25 @@ The two affected notebooks carry a header cell stating which of their cells will
 
 The underlying data cannot be published because it contains UK GDPR Article 9
 special-category data (ethnicity, religion, disability, mental health, political opinion)
-at a level of detail that makes most respondents unique. To request access for
-replication, contact the corresponding author.
-
-> **Placeholder:** add the contact route, and the data-access process and conditions.
-
-## Ethics and funding
-
-> **Placeholder:** add the ethics approval body and reference number, the participant
-> consent basis for data sharing, the fieldwork provider, and funding acknowledgements.
+at a level of detail that makes most respondents unique. Researchers wanting access for
+replication should contact the corresponding author of the paper.
 
 ## Citation
 
-> **Placeholder:** add a `CITATION.cff` and the preferred citation.
+Please cite the paper rather than this repository. A machine-readable version is in
+[`CITATION.cff`](CITATION.cff).
+
+```bibtex
+@misc{luettgau2026conversationalaiincreasespolitical,
+      title={Conversational AI increases political knowledge as effectively as self-directed internet search},
+      author={Lennart Luettgau and Hannah Rose Kirk and Kobi Hackenburg and Jessica Bergs and Henry Davidson and Henry Ogden and Divya Siddarth and Saffron Huang and Christopher Summerfield},
+      year={2026},
+      eprint={2509.05219},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2509.05219},
+}
+```
 
 ## Licence
 

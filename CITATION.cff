@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite the accompanying paper."
+title: "Conversational AI increases political knowledge as effectively as self-directed internet search: analysis code and data"
+abstract: >-
+  Analysis code and de-identified data for two studies on UK samples around the 2024
+  general election: a nationally representative survey of conversational AI use for
+  politically relevant information, and randomised controlled trials comparing
+  task-directed AI conversation against self-directed internet search.
+authors:
+  - given-names: Lennart
+    family-names: Luettgau
+  - given-names: Hannah Rose
+    family-names: Kirk
+  - given-names: Kobi
+    family-names: Hackenburg
+  - given-names: Jessica
+    family-names: Bergs
+  - given-names: Henry
+    family-names: Davidson
+  - given-names: Henry
+    family-names: Ogden
+  - given-names: Divya
+    family-names: Siddarth
+  - given-names: Saffron
+    family-names: Huang
+  - given-names: Christopher
+    family-names: Summerfield
+license: MIT
+license-url: "https://github.com/lenluettgau/dhi1-analysis-public/blob/main/LICENSE"
+repository-code: "https://github.com/lenluettgau/dhi1-analysis-public"
+type: software
+preferred-citation:
+  type: article
+  title: "Conversational AI increases political knowledge as effectively as self-directed internet search"
+  authors:
+    - given-names: Lennart
+      family-names: Luettgau
+    - given-names: Hannah Rose
+      family-names: Kirk
+    - given-names: Kobi
+      family-names: Hackenburg
+    - given-names: Jessica
+      family-names: Bergs
+    - given-names: Henry
+      family-names: Davidson
+    - given-names: Henry
+      family-names: Ogden
+    - given-names: Divya
+      family-names: Siddarth
+    - given-names: Saffron
+      family-names: Huang
+    - given-names: Christopher
+      family-names: Summerfield
+  year: 2026
+  journal: arXiv
+  doi: "10.48550/arXiv.2509.05219"
+  url: "https://arxiv.org/abs/2509.05219"
+  notes: "arXiv:2509.05219 [cs.HC]. Preprint; update to the journal DOI on publication."
