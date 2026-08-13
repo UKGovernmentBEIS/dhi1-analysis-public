@@ -51,9 +51,8 @@ bash setup.sh                     # creates analysis_env/ and registers a Jupyte
 source analysis_env/bin/activate
 ```
 
-`requirements.txt` records the constraints the analysis was developed against, not a
-lockfile — see the note at the top of that file. The MCMC runs are GPU-accelerated via
-JAX; they will run on CPU but slowly.
+`requirements.txt` lists the pinned package versions for the analysis. MCMC estimates
+vary slightly across `jax`/`numpyro` versions, so re-runs may introduce sampling variance (which do not influence the inferences drawn based on the results).
 
 ## Reproducing the results
 
@@ -75,6 +74,8 @@ The two pipelines write to separate directories by default, so neither can overw
 other's results: the canonical script writes to `parameter_estimates/` and `plots/`, and
 `data_analysis_pipeline.py` writes to `parameter_estimates_compliance_cov/` and
 `plots_compliance_cov/`. Override either with `--output-dir` / `--plots-dir`.
+
+The MCMC runs are GPU-accelerated via JAX; they will run on CPU but slowly.
 
 ### Why there are two pipelines
 
