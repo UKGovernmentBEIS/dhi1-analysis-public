@@ -21,10 +21,3 @@ Attribution statement
 > Contains public sector information licensed under the Open Government Licence v3.0.
 
 Please also cite the accompanying paper — see the Citation section of README.md.
-
-Note on the data
-----------------
-The participant data in data/ is pseudonymised: all demographic variables, the
-fieldwork panel's respondent identifier, exact age, and the survey weight have been
-removed. See the Data section of README.md for details. Do not attempt to
-re-identify individual respondents.

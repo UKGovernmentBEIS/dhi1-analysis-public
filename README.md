@@ -18,9 +18,21 @@ The paper reports two studies conducted on UK samples around the 2024 general el
   beliefs, and attitude extremity. Effects were assessed across topics, viewpoints, prompting
   strategies, and model families.
 
-This repository contains the data and code behind those analyses. See
-[Reproducing the results](#reproducing-the-results) for what does and does not regenerate
-from the published data.
+## About
+
+Analysis code and pseudonymised data supporting the paper above, published by the
+**UK AI Security Institute**.
+
+- **What this is** — the data and analysis pipeline behind the two studies described above.
+- **What you can do with it** — re-run the reported Bayesian ordinal GLMs end to end and
+  regenerate 33 of the 37 published parameter-estimate files. See
+  [What does not reproduce from public data](#what-does-not-reproduce-from-public-data)
+  for the four exceptions and why they exist.
+- **Data protection** — participant data is pseudonymised. All demographic variables, the
+  fieldwork panel's respondent identifier, exact age etc. have been
+  removed.
+- **Licence** — MIT for code; Open Government Licence v3.0 for data, figures and parameter
+  estimates. See [Licence](#licence).
 
 ## Repository layout
 
@@ -123,8 +135,13 @@ replication should contact the corresponding author of the paper.
 
 ## Citation
 
-Please cite the paper rather than this repository. A machine-readable version is in
-[`CITATION.cff`](CITATION.cff).
+If you use the findings, **cite the paper**. If you use the data or code specifically,
+please cite **both** the paper and this repository.
+
+Machine-readable metadata is in [`CITATION.cff`](CITATION.cff), so GitHub's
+*Cite this repository* button resolves to the paper.
+
+### The paper
 
 ```bibtex
 @misc{luettgau2026conversationalaiincreasespolitical,
@@ -137,6 +154,21 @@ Please cite the paper rather than this repository. A machine-readable version is
       url={https://arxiv.org/abs/2509.05219},
 }
 ```
+
+### This repository
+
+```bibtex
+@software{luettgau2026dhi1analysis,
+      title={Conversational AI increases political knowledge as effectively as self-directed internet search: analysis code and data},
+      author={Lennart Luettgau and Hannah Rose Kirk and Kobi Hackenburg and Jessica Bergs and Henry Davidson and Henry Ogden and Divya Siddarth and Saffron Huang and Christopher Summerfield},
+      year={2026},
+      publisher={UK AI Security Institute},
+      url={https://github.com/lenluettgau/dhi1-analysis-public},
+}
+```
+
+When reusing the data, figures or parameter estimates, also include the Open Government
+Licence attribution statement given under [Licence](#licence).
 
 ## Licence
 

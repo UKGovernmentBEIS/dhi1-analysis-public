@@ -25,8 +25,11 @@ authors:
     family-names: Huang
   - given-names: Christopher
     family-names: Summerfield
-license: MIT
-license-url: "https://github.com/lenluettgau/dhi1-analysis-public/blob/main/LICENSE"
+# Dual-licensed: MIT covers code/, OGL-UK-3.0 covers data/, figures/ and
+# parameter_estimates*/. See LICENSE and LICENSE-DATA.
+license:
+  - MIT
+  - OGL-UK-3.0
 repository-code: "https://github.com/lenluettgau/dhi1-analysis-public"
 type: software
 preferred-citation:
