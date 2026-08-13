@@ -26,8 +26,8 @@ from the published data.
 
 | Path | Contents |
 |---|---|
-| `code/` | Analysis pipeline, notebooks, and the de-identification script |
-| `data/` | Pseudonimised participant data and survey codebooks |
+| `code/` | Analysis pipeline and notebooks |
+| `data/` | Pseudonymised participant data and survey codebooks |
 | `parameter_estimates/` | **Reported** GLM parameter estimates and WAIC comparisons |
 | `parameter_estimates_compliance_cov/` | Same models retaining the post-treatment compliance covariate (not reported; see below) |
 | `figures/` | Figures as published, in PDF |
@@ -74,22 +74,7 @@ inspected.
 
 ## Data
 
-Row-level participant data in this repository has been de-identified. The following were
-removed in full:
-
-- **All demographic variables** — from `survey_data/analysis.csv`: age, gender, region,
-  housing tenure, education, income, ethnicity, children, social grade, work status; and
-  from `Ztable_indiv_combined.csv` and the `*_exclusions.csv` files: age, gender,
-  ethnicity, region, income, religion, education, vote, Brexit vote, disability, mental
-  health, chatbot use.
-- **The fieldwork panel's respondent identifier**, replaced with a randomly assigned
-  pseudonym. Row order was shuffled before assignment, so the original ordering is not
-  recoverable.
-- **The survey weight** (`W8`) and the four free-text "other" response columns.
-
-Respondent-level data cannot be re-linked to the original panel records from anything in
-this repository. The transform is documented in full in the project's de-identification
-record, which is held with the restricted source data rather than published here.
+Row-level participant data in this repository is pseudonymised.
 
 | File | Contents |
 |---|---|
